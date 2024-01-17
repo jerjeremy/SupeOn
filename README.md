@@ -16,3 +16,4 @@ _NOTE: use primitive sprites for now (ie. shapes instead of final sprites)_
 4. Wolf random appearance (Sartaj)
 5. Fox movement (Krutarth)
 6. Bucket-Egg collision (Jeremy)
+7. Shotgun (OPEN)
