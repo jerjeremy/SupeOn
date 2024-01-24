@@ -10,10 +10,21 @@ public class FoxMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    void Update()
+    private void Update()
     {
-        xInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(xInput * xSpeed, rb.velocity.y);
+        FoxMove();
+    }
+    void FoxMove()
+    {
+        transform.Translate(Vector2.left * (xSpeed * Time.deltaTime)); // moves my fox to left with xSpeed, no matter how fast or slow the computer runs (due to Time.deltaTime)
+        if (transform.position.x <= -7.80f)
+        {
+            xSpeed = -xSpeed; // flips the direction of fox by changing sign
+        }
+        if (transform.position.x >= 7.28f)
+        {
+            transform.Translate(Vector2.left * -xSpeed * Time.deltaTime); //To stop the fox
+            Debug.Log(-xSpeed); 
+        }
     }
 }
