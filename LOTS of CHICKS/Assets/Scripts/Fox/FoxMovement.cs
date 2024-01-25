@@ -24,7 +24,9 @@ public class FoxMovement : MonoBehaviour
         if (transform.position.x >= 7.28f)
         {
             transform.Translate(Vector2.left * -xSpeed * Time.deltaTime); //To stop the fox
-            Debug.Log(-xSpeed); 
+            Debug.Log(-xSpeed);
+            Destroy(gameObject);
+            
         }
     }
 }
