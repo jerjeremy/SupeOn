@@ -1,12 +1,13 @@
-// Fox Spawner
 using UnityEngine;
 
 public class FoxSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject foxPrefab;
-    [SerializeField] private float minSpawnTime; // minimum is needed, at least
-    [SerializeField] private float maxSpawnTime; // maximum, because we want to spawn fox between that time interval
+    [SerializeField] private float minSpawnTime;
+    [SerializeField] private float maxSpawnTime;
     private float timeUntilSpawn;
+
+    [SerializeField] private Transform[] spawnPositions; // array of spawnPositions
 
     void Awake()
     {
@@ -17,7 +18,7 @@ public class FoxSpawn : MonoBehaviour
     {
         timeUntilSpawn -= Time.deltaTime;
 
-        if (timeUntilSpawn <= 0 && GameObject.FindWithTag("Fox") == null) //if there is no active fox, instantiate fox then and only.
+        if (timeUntilSpawn <= 0 && GameObject.FindWithTag("Fox") == null)
         {
             SpawnFox();
             SetTimeUntilSpawn();
@@ -26,7 +27,13 @@ public class FoxSpawn : MonoBehaviour
 
     private void SpawnFox()
     {
-        Instantiate(foxPrefab, transform.position, Quaternion.identity);
+        // Choose a random spawn position from the array
+
+        int index = Random.Range(0, 3); // because I have 3 spawn locations at the moment.
+        Vector2 randomSpawnPosition = spawnPositions[index].position; //multiple spawners, so can't use transform.positions
+        Debug.Log("index: " + index); // developers' use
+
+        Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity); // it will spawn fox from our specified random position.
     }
 
     private void SetTimeUntilSpawn()

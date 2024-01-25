@@ -782,8 +782,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foxPrefab: {fileID: 4466954169229106218, guid: f877214cf8e67a24d83f6068318459aa, type: 3}
-  minSpawnTime: 5
-  maxSpawnTime: 10
+  minSpawnTime: 3
+  maxSpawnTime: 7
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,8 +2003,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foxPrefab: {fileID: 4466954169229106218, guid: f877214cf8e67a24d83f6068318459aa, type: 3}
-  minSpawnTime: 5
-  maxSpawnTime: 10
+  minSpawnTime: 3
+  maxSpawnTime: 7
 --- !u!1 &1291144792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,8 +2410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foxPrefab: {fileID: 4466954169229106218, guid: f877214cf8e67a24d83f6068318459aa, type: 3}
-  minSpawnTime: 5
-  maxSpawnTime: 10
+  minSpawnTime: 3
+  maxSpawnTime: 7
 --- !u!1 &1951577933
 GameObject:
   m_ObjectHideFlags: 0
