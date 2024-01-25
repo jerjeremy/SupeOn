@@ -8,7 +8,7 @@ public class FoxSpawn : MonoBehaviour
     private float timeUntilSpawn;
 
     [SerializeField] private Transform[] spawnPositions; // array of spawnPositions
-
+    private int lastSpawnIndex = -1; // initialized to a number which is different than our chosen locations
     void Awake()
     {
         SetTimeUntilSpawn();
@@ -27,13 +27,18 @@ public class FoxSpawn : MonoBehaviour
 
     private void SpawnFox()
     {
-        // Choose a random spawn position from the array
+        int index;
+        do
+        {
+            index = Random.Range(0, 3); // because I have 3 spawn locations at the moment.
 
-        int index = Random.Range(0, 3); // because I have 3 spawn locations at the moment.
+        } while (index == lastSpawnIndex);
+
         Vector2 randomSpawnPosition = spawnPositions[index].position; //multiple spawners, so can't use transform.positions
         Debug.Log("index: " + index); // developers' use
 
         Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity); // it will spawn fox from our specified random position.
+        lastSpawnIndex = index; // we need to update the lastSpawnIndex to current index, after spawning of fox
     }
 
     private void SetTimeUntilSpawn()
