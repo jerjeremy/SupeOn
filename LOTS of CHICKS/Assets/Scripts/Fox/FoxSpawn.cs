@@ -4,8 +4,8 @@ using UnityEngine;
 public class FoxSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject foxPrefab;
-    [SerializeField] private float minSpawnTime;
-    [SerializeField] private float maxSpawnTime;
+    [SerializeField] private float minSpawnTime; // minimum is needed, at least
+    [SerializeField] private float maxSpawnTime; // maximum, because we want to spawn fox between that time interval
     private float timeUntilSpawn;
 
     void Awake()
@@ -17,7 +17,7 @@ public class FoxSpawn : MonoBehaviour
     {
         timeUntilSpawn -= Time.deltaTime;
 
-        if (timeUntilSpawn <= 0 && GameObject.FindWithTag("Fox") == null)
+        if (timeUntilSpawn <= 0 && GameObject.FindWithTag("Fox") == null) //if there is no active fox, instantiate fox then and only.
         {
             SpawnFox();
             SetTimeUntilSpawn();
