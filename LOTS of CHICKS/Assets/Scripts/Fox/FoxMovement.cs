@@ -4,7 +4,6 @@ public class FoxMovement : MonoBehaviour
 {
     Rigidbody2D rb; // Rigidbody2D component
     [SerializeField] float xSpeed; // horizontal speed
-    float xInput; // Horizontal Input
 
     void Start()
     {
