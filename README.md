@@ -18,5 +18,6 @@ _NOTE: use primitive sprites for now (ie. shapes instead of final sprites)_
 3. Prefab chicken egg (Saad)
 4. Wolf random appearance (Sartaj) :white_check_mark:
 5. Fox movement (Krutarth) :white_check_mark:
-6. Bucket-Egg collision (Jeremy)
-7. Shotgun (OPEN)
+6. Bucket-Egg collision (Jeremy) :white_check_mark:
+7. Bucket controller :white_check_mark:
+8. Shotgun (OPEN)
