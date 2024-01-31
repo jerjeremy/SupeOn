@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2118906941432120259}
   - component: {fileID: 5736698834202891377}
   - component: {fileID: 2827909366467869290}
+  - component: {fileID: -5763279411179196534}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Egg
@@ -98,10 +99,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0.25
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -148,3 +149,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &-5763279411179196534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361422325673714455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85428ebf85a5e484f96bd0d485cb35c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eggSpeed: 10
