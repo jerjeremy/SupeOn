@@ -15,9 +15,12 @@ _NOTE: use primitive sprites for now (ie. shapes instead of final sprites)_
 
 1. Background sprite (OPEN) :white_check_mark:
 2. Background code (Saad) :white_check_mark:
-3. Prefab chicken egg (Saad)
-4. Wolf random appearance (Sartaj) :white_check_mark:
-5. Fox movement (Krutarth) :white_check_mark:
-6. Bucket-Egg collision (Jeremy) :white_check_mark:
-7. Bucket controller :white_check_mark:
-8. Shotgun (OPEN)
+3. Wolf random appearance (Sartaj) :white_check_mark:
+4. Fox movement (Krutarth) :white_check_mark:
+5. Bucket-Egg collision (Jeremy) :white_check_mark:
+6. Bucket controller :white_check_mark:
+7. Shotgun (OPEN) :white_check_mark:
+
+## Week 5-8
+1. Prefab chicken egg (Saad)
+2. Scoreboard
