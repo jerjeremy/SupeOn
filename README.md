@@ -19,8 +19,17 @@ _NOTE: use primitive sprites for now (ie. shapes instead of final sprites)_
 4. Fox movement (Krutarth) :white_check_mark:
 5. Bucket-Egg collision (Jeremy) :white_check_mark:
 6. Bucket controller :white_check_mark:
-7. Shotgun (OPEN) :white_check_mark:
+7. Egg Collector :white_check_mark:
+8. Ropes (simple) Jeremy
 
 ## Week 5-8
-1. Prefab chicken egg (Saad)
-2. Scoreboard
+1. Prefab chicken egg (Saad) :white_check_mark:
+2. Chicken :white_check_mark:
+3. Scoreboard (Sartaj)
+4. Music (Krutarth)
+5. Shotgun (Jeremy) :white_check_mark:
+   * crosshair
+7. Sprites (Saad)
+8. Fox Shoot Cooldown (Saad & Krutarth)
+9. Connect Scripts (Saad)
+10. Day and Night Cycle (Mahian)
