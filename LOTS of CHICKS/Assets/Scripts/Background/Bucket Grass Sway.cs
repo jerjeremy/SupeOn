@@ -23,7 +23,7 @@ public class BucketGrassSway : MonoBehaviour
         rb = _bucket.GetComponent<Rigidbody>();
         _grassVelocityController = GetComponentInParent<GrassVelocity>();
 
-        _material = _bucket.GetComponent<SpriteRenderer>().material;
+        _material = _bucket.transform.GetChild(0).GetComponent<SpriteRenderer>().material;
         _startingVelocity = _material.GetFloat(_externalInfluence);
     }
 
