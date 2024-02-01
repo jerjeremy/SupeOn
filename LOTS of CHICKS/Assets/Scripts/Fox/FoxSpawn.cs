@@ -6,6 +6,7 @@ public class FoxSpawn : MonoBehaviour
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
     [SerializeField] private int DeathLag; //When fox dies
+    [SerializeField] GameObject shotgunObject;
 
     private float timeUntilSpawn;
     private bool firstSpawn;
@@ -16,7 +17,7 @@ public class FoxSpawn : MonoBehaviour
     void Awake()
     {
         SetTimeUntilSpawn();
-        _shotgun = GetComponent<Shotgun>();
+        _shotgun = shotgunObject.GetComponent<Shotgun>();
     }
 
     void Update()
@@ -36,10 +37,12 @@ public class FoxSpawn : MonoBehaviour
         if(_shotgun.foxIsHit == true)
         {
             firstSpawn = false;
+            Debug.Log("firstSpawn is now set to false");
         }
         else if(_shotgun.foxIsHit == false)
         {
             firstSpawn = true;
+            Debug.Log("firstSpawn is now set to true");
         }
     }
 

@@ -589,6 +589,8 @@ MonoBehaviour:
   foxPrefab: {fileID: 4466954169229106218, guid: a89637fa767444144809ec2f20192ee9, type: 3}
   minSpawnTime: 3
   maxSpawnTime: 7
+  DeathLag: 0
+  _shotgun: {fileID: 0}
   spawnPositions:
   - {fileID: 405695400}
   - {fileID: 503922352}
@@ -2725,8 +2727,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1172515396}
-  - component: {fileID: 1172515397}
   - component: {fileID: 1172515398}
+  - component: {fileID: 1172515399}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -2749,18 +2751,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1172515397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172515395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e61b19cfa67fdc747929189e1a992a42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1172515398
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2796,6 +2786,19 @@ CircleCollider2D:
   m_Offset: {x: -0.49989998, y: 0}
   serializedVersion: 2
   m_Radius: 0.0001
+--- !u!114 &1172515399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172515395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61b19cfa67fdc747929189e1a992a42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foxIsHit: 0
 --- !u!1 &1177669660
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,6 +3629,8 @@ MonoBehaviour:
   foxPrefab: {fileID: 4466954169229106218, guid: f877214cf8e67a24d83f6068318459aa, type: 3}
   minSpawnTime: 3
   maxSpawnTime: 7
+  DeathLag: 0
+  _shotgun: {fileID: 0}
   spawnPositions:
   - {fileID: 618586094}
   - {fileID: 1913811757}

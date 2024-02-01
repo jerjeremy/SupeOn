@@ -23,9 +23,9 @@ public class Shotgun : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Fox"))
                 {
-                    Destroy(hit.collider.gameObject);
                     foxIsHit=true;
                     Debug.Log("Fox Hit");
+                    Destroy(hit.collider.gameObject);
                 }
             }
         }
