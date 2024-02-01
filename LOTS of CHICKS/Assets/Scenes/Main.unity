@@ -590,7 +590,7 @@ MonoBehaviour:
   minSpawnTime: 3
   maxSpawnTime: 7
   DeathLag: 0
-  _shotgun: {fileID: 0}
+  shotgunObject: {fileID: 1172515395}
   spawnPositions:
   - {fileID: 405695400}
   - {fileID: 503922352}
@@ -3630,7 +3630,7 @@ MonoBehaviour:
   minSpawnTime: 3
   maxSpawnTime: 7
   DeathLag: 0
-  _shotgun: {fileID: 0}
+  shotgunObject: {fileID: 1172515395}
   spawnPositions:
   - {fileID: 618586094}
   - {fileID: 1913811757}
