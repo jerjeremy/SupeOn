@@ -56,12 +56,13 @@ public class FoxSpawn : MonoBehaviour
         Debug.Log("index: " + index); // developers' use
 
         Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity); // it will spawn fox from our specified random position.
+        _shotgun.foxIsHit = false;
         lastSpawnIndex = index; // we need to update the lastSpawnIndex to current index, after spawning of fox
     }
 
     private void SetTimeUntilSpawn()
     {
-        if (firstSpawn == true)
+        if (firstSpawn == false)
         {
             timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
         }
