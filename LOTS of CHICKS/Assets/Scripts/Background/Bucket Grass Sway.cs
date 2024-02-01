@@ -5,7 +5,7 @@ using UnityEngine;
 public class BucketGrassSway : MonoBehaviour
 {
     private GrassVelocity _grassVelocityController;
-    private GameObject _bucket;
+    [SerializeField] private GameObject _bucket;
     private Material _material;
     private Rigidbody rb;
 
@@ -19,7 +19,7 @@ public class BucketGrassSway : MonoBehaviour
 
     private void Start()
     {
-        _bucket = GameObject.FindGameObjectWithTag("Bucket");
+        //_bucket = GameObject.FindGameObjectWithTag("Bucket");
         rb = _bucket.GetComponent<Rigidbody>();
         _grassVelocityController = GetComponentInParent<GrassVelocity>();
 
