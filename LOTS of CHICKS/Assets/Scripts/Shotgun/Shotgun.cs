@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Shotgun : MonoBehaviour
 {
+    public bool foxIsHit = false;
+
+    void Start()
+    {
+        //_foxSpawn = GetComponent<FoxSpawn>();
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -18,9 +24,15 @@ public class Shotgun : MonoBehaviour
                 if (hit.collider.CompareTag("Fox"))
                 {
                     Destroy(hit.collider.gameObject);
+                    foxIsHit=true;
                     Debug.Log("Fox Hit");
                 }
             }
         }
     }
+
+    //public void DeathTimeLag()
+    //{
+    //    _foxSpawn.timeUntilSpawn += DeathLag;
+    //}
 }

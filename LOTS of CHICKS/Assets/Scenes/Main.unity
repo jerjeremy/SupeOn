@@ -390,7 +390,6 @@ GameObject:
   - component: {fileID: 377009930}
   - component: {fileID: 377009931}
   - component: {fileID: 377009933}
-  - component: {fileID: 377009932}
   m_Layer: 6
   m_Name: grass1 (1)
   m_TagString: Untagged
@@ -465,19 +464,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &377009932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377009929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &377009933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1419,7 +1405,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 708391068}
-  - component: {fileID: 708391069}
   m_Layer: 6
   m_Name: Grass
   m_TagString: Untagged
@@ -1453,22 +1438,6 @@ Transform:
   - {fileID: 1074300266}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &708391069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708391067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f56521a0b73b844d8536e7947f9fcba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  externalInfluence: 0.5
-  easeInTime: 0.15
-  easeOutTime: 0.15
-  VelocityThreshold: 5
 --- !u!1 &719293524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,7 +1449,6 @@ GameObject:
   - component: {fileID: 719293525}
   - component: {fileID: 719293526}
   - component: {fileID: 719293528}
-  - component: {fileID: 719293527}
   m_Layer: 6
   m_Name: grass4 (1)
   m_TagString: Untagged
@@ -1555,19 +1523,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &719293527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719293524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &719293528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1624,7 +1579,6 @@ GameObject:
   - component: {fileID: 731919281}
   - component: {fileID: 731919282}
   - component: {fileID: 731919284}
-  - component: {fileID: 731919283}
   m_Layer: 6
   m_Name: grass4
   m_TagString: Untagged
@@ -1699,19 +1653,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &731919283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731919280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &731919284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1768,7 +1709,6 @@ GameObject:
   - component: {fileID: 825051156}
   - component: {fileID: 825051157}
   - component: {fileID: 825051159}
-  - component: {fileID: 825051158}
   m_Layer: 6
   m_Name: grass2
   m_TagString: Untagged
@@ -1843,19 +1783,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &825051158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825051155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &825051159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2098,7 +2025,6 @@ GameObject:
   - component: {fileID: 912791724}
   - component: {fileID: 912791725}
   - component: {fileID: 912791727}
-  - component: {fileID: 912791726}
   m_Layer: 6
   m_Name: grass3
   m_TagString: Untagged
@@ -2173,19 +2099,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &912791726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912791723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &912791727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2506,7 +2419,6 @@ GameObject:
   - component: {fileID: 1120128285}
   - component: {fileID: 1120128286}
   - component: {fileID: 1120128288}
-  - component: {fileID: 1120128287}
   m_Layer: 6
   m_Name: grass5 (1)
   m_TagString: Untagged
@@ -2581,19 +2493,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1120128287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120128284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &1120128288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2650,7 +2549,6 @@ GameObject:
   - component: {fileID: 1135737084}
   - component: {fileID: 1135737085}
   - component: {fileID: 1135737087}
-  - component: {fileID: 1135737086}
   m_Layer: 6
   m_Name: grass3 (1)
   m_TagString: Untagged
@@ -2725,19 +2623,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1135737086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135737083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &1135737087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3006,7 +2891,6 @@ GameObject:
   - component: {fileID: 1242507386}
   - component: {fileID: 1242507387}
   - component: {fileID: 1242507389}
-  - component: {fileID: 1242507388}
   m_Layer: 6
   m_Name: grass2 (1)
   m_TagString: Untagged
@@ -3081,19 +2965,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1242507388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242507385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &1242507389
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3350,7 +3221,6 @@ GameObject:
   - component: {fileID: 1570248892}
   - component: {fileID: 1570248893}
   - component: {fileID: 1570248895}
-  - component: {fileID: 1570248894}
   m_Layer: 6
   m_Name: grass5
   m_TagString: Untagged
@@ -3425,19 +3295,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1570248894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570248891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &1570248895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3602,7 +3459,6 @@ GameObject:
   - component: {fileID: 1617140988}
   - component: {fileID: 1617140987}
   - component: {fileID: 1617140990}
-  - component: {fileID: 1617140989}
   m_Layer: 6
   m_Name: grass1
   m_TagString: Untagged
@@ -3677,19 +3533,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 708391068}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1617140989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617140986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc9235614f8fcb43914b6ad5e17b33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bucket: {fileID: 164007235}
 --- !u!61 &1617140990
 BoxCollider2D:
   m_ObjectHideFlags: 0

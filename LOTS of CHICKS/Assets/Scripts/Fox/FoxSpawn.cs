@@ -5,13 +5,18 @@ public class FoxSpawn : MonoBehaviour
     [SerializeField] private GameObject foxPrefab;
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
+    [SerializeField] private int DeathLag; //When fox dies
+
     private float timeUntilSpawn;
+    private bool firstSpawn;
+    private Shotgun _shotgun; // accessing Shotgun Script
 
     [SerializeField] private Transform[] spawnPositions; // array of spawnPositions
     private int lastSpawnIndex = -1; // initialized to a number which is different than our chosen locations
     void Awake()
     {
         SetTimeUntilSpawn();
+        _shotgun = GetComponent<Shotgun>();
     }
 
     void Update()
@@ -22,6 +27,19 @@ public class FoxSpawn : MonoBehaviour
         {
             SpawnFox();
             SetTimeUntilSpawn();
+            foxHitOrNot();
+        }
+    }
+
+    private void foxHitOrNot()
+    {
+        if(_shotgun.foxIsHit == true)
+        {
+            firstSpawn = false;
+        }
+        else if(_shotgun.foxIsHit == false)
+        {
+            firstSpawn = true;
         }
     }
 
@@ -43,6 +61,13 @@ public class FoxSpawn : MonoBehaviour
 
     private void SetTimeUntilSpawn()
     {
-        timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
+        if (firstSpawn == true)
+        {
+            timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
+        }
+        else if(firstSpawn == true)
+        {
+            timeUntilSpawn = Random.Range(minSpawnTime + DeathLag, maxSpawnTime + DeathLag);
+        }
     }
 }
