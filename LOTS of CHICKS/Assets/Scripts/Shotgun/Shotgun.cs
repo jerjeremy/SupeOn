@@ -29,6 +29,9 @@ public class Shotgun : MonoBehaviour
                 }
             }
         }
+
+        Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = cursorPosition;
     }
 
     //public void DeathTimeLag()
