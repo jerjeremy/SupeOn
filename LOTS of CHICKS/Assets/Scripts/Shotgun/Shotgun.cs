@@ -29,14 +29,6 @@ public class Shotgun : MonoBehaviour
                 }
             }
         }
-        if(foxIsHit)
-        {
-            Debug.Log("True");
-        }
-        else
-        {
-            Debug.Log("false");
-        }
     }
 
     //public void DeathTimeLag()

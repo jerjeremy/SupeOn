@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FoxSpawn : MonoBehaviour
@@ -27,10 +28,10 @@ public class FoxSpawn : MonoBehaviour
         {
             SpawnFox();
             SetTimeUntilSpawn();
-            foxHitOrNot();
         }
     }
 
+    
     private void foxHitOrNot()
     {
         if(_shotgun.foxIsHit == true)
@@ -40,7 +41,7 @@ public class FoxSpawn : MonoBehaviour
         else if(_shotgun.foxIsHit == false)
         {
             firstSpawn = true;
-        }
+          }
     }
 
     private void SpawnFox()
@@ -62,6 +63,7 @@ public class FoxSpawn : MonoBehaviour
 
     private void SetTimeUntilSpawn()
     {
+        foxHitOrNot();
         if (firstSpawn == false)
         {
             timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
