@@ -5,27 +5,32 @@ using UnityEngine;
 public class EggSpawner : MonoBehaviour
 {
     [SerializeField] GameObject eggPrefab;
-    float timerInstantiate = 1.0f;
+
+    [SerializeField] private float _minimumSpawnTime;
+
+    [SerializeField] private float _maximumSpawnTime;
+
+    private float _timeUntilSpawn;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        SetTimeUntilSpawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnEgg();
+        _timeUntilSpawn -= Time.deltaTime;
+
+        if (_timeUntilSpawn <= 0)
+        {
+            Instantiate(eggPrefab, transform.position, Quaternion.identity);
+            SetTimeUntilSpawn();
+        }
     }
 
-    void SpawnEgg()
+    private void SetTimeUntilSpawn()
     {
-        Vector3 spawnPoint = new Vector3(Random.Range(-4.0f, 5.0f),Random.Range(-1.0f, 4.0f), 0.0f);
-        timerInstantiate -= Time.deltaTime;
-        if (timerInstantiate <=0)
-        {
-            Instantiate(eggPrefab, spawnPoint, Quaternion.identity);
-            timerInstantiate = 1.0f;
-        }
+        _timeUntilSpawn = UnityEngine.Random.Range(_minimumSpawnTime, _maximumSpawnTime);
     }
 }
