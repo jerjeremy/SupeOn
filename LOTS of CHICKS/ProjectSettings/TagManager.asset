@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fox
   - Egg
+  - Bucket
   layers:
   - Default
   - TransparentFX
@@ -13,9 +14,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - bg
+  - fox chicken
+  - egg bucket
   - 
   - 
   - 
@@ -42,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1887949029
+    locked: 0
+  - name: chicken & fox
+    uniqueID: 1127506537
+    locked: 0
+  - name: egg bucket
+    uniqueID: 2710444035
     locked: 0

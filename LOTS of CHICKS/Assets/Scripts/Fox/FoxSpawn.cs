@@ -1,15 +1,26 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FoxSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject foxPrefab;
+    [SerializeField] private GameObject shotgunObject; // reference via Unity thru gameObject
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
+    [SerializeField] private int DeathLag; //When fox dies
+
     private float timeUntilSpawn;
+    private bool firstSpawn;
+    private Shotgun _shotgun; // accessing Shotgun Script attached to `shotgunObject`
 
     [SerializeField] private Transform[] spawnPositions; // array of spawnPositions
     private int lastSpawnIndex = -1; // initialized to a number which is different than our chosen locations
+    
     void Awake()
+    {
+        _shotgun = shotgunObject.GetComponent<Shotgun>();
+    }
+    void Start()
     {
         SetTimeUntilSpawn();
     }
@@ -25,6 +36,19 @@ public class FoxSpawn : MonoBehaviour
         }
     }
 
+    
+    private void foxHitOrNot()
+    {
+        if(_shotgun.foxIsHit == true)
+        {
+            firstSpawn = false;
+        }
+        else if(_shotgun.foxIsHit == false)
+        {
+            firstSpawn = true;
+          }
+    }
+
     private void SpawnFox()
     {
         int index;
@@ -38,11 +62,20 @@ public class FoxSpawn : MonoBehaviour
         Debug.Log("index: " + index); // developers' use
 
         Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity); // it will spawn fox from our specified random position.
+        _shotgun.foxIsHit = false;
         lastSpawnIndex = index; // we need to update the lastSpawnIndex to current index, after spawning of fox
     }
 
     private void SetTimeUntilSpawn()
     {
-        timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
+        foxHitOrNot();
+        if (firstSpawn == false)
+        {
+            timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
+        }
+        else if(firstSpawn == true)
+        {
+            timeUntilSpawn = Random.Range(minSpawnTime + DeathLag, maxSpawnTime + DeathLag);
+        }
     }
 }

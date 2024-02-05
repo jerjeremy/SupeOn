@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Egg : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float eggSpeed;
     void Start()
     {
         
@@ -13,6 +13,10 @@ public class Egg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.down * (eggSpeed * Time.deltaTime));
+        if (transform.position.y <= -6.37f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
