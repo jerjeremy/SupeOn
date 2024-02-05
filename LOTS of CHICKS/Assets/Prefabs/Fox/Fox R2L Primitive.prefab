@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3677556176449900700}
   - component: {fileID: 8142647898942920089}
   - component: {fileID: 2453384987282873224}
-  - component: {fileID: 1560202192556071976}
-  - component: {fileID: -4185307620902224478}
+  - component: {fileID: 5354765768648874453}
+  - component: {fileID: -3832973089415344387}
   m_Layer: 0
-  m_Name: Fox left
+  m_Name: Fox R2L Primitive
   m_TagString: Fox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1560202192556071976
+--- !u!114 &5354765768648874453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,11 +123,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4466954169229106218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dbbc733614ea364d83e1173b7e78d48, type: 3}
+  m_Script: {fileID: 11500000, guid: c10404d647a9cd1478ef7fb58a42e668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xxSpeed: 5
---- !u!61 &-4185307620902224478
+  xSpeed: 5
+--- !u!61 &-3832973089415344387
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
