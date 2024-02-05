@@ -4,20 +4,25 @@ using UnityEngine;
 public class FoxSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject foxPrefab;
+    [SerializeField] private GameObject shotgunObject; // reference via Unity thru gameObject
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
     [SerializeField] private int DeathLag; //When fox dies
 
     private float timeUntilSpawn;
     private bool firstSpawn;
-    private Shotgun _shotgun; // accessing Shotgun Script
+    private Shotgun _shotgun; // accessing Shotgun Script attached to `shotgunObject`
 
     [SerializeField] private Transform[] spawnPositions; // array of spawnPositions
     private int lastSpawnIndex = -1; // initialized to a number which is different than our chosen locations
+    
     void Awake()
     {
+        _shotgun = shotgunObject.GetComponent<Shotgun>();
+    }
+    void Start()
+    {
         SetTimeUntilSpawn();
-        _shotgun = GetComponent<Shotgun>();
     }
 
     void Update()
