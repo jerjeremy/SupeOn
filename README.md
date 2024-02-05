@@ -27,11 +27,11 @@ _NOTE: use primitive sprites for now (ie. shapes instead of final sprites)_
 ## Week 5-8
 1. Prefab chicken egg (Saad) :white_check_mark:
 2. Chicken :white_check_mark:
-3. Scoreboard (Sartaj)
+3. Scoreboard (Sartaj) :white_check_mark:
 4. Music (Krutarth)
 7. Sprites (Saad)
 8. Fox Shoot Cooldown (Saad & Krutarth)
-9. Connect Scripts (Saad)
+9. Connect Scripts (Saad) :white_check_mark:
 10. Day and Night Cycle (Mahian)
 
 ## Week 9-12
