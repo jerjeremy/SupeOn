@@ -7,6 +7,7 @@ TagManager:
   - Fox
   - Egg
   - Bucket
+  - Chicken
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - Water
   - UI
   - bg
-  - fox chicken
+  - Chicken
   - egg bucket
-  - 
+  - Fox
   - 
   - 
   - 
