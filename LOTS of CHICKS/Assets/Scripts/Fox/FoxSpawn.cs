@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FoxSpawn : MonoBehaviour
@@ -6,7 +7,6 @@ public class FoxSpawn : MonoBehaviour
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
     [SerializeField] private int DeathLag; //When fox dies
-    [SerializeField] GameObject shotgunObject;
 
     private float timeUntilSpawn;
     private bool firstSpawn;
@@ -17,7 +17,7 @@ public class FoxSpawn : MonoBehaviour
     void Awake()
     {
         SetTimeUntilSpawn();
-        _shotgun = shotgunObject.GetComponent<Shotgun>();
+        _shotgun = GetComponent<Shotgun>();
     }
 
     void Update()
@@ -28,22 +28,20 @@ public class FoxSpawn : MonoBehaviour
         {
             SpawnFox();
             SetTimeUntilSpawn();
-            foxHitOrNot();
         }
     }
 
+    
     private void foxHitOrNot()
     {
         if(_shotgun.foxIsHit == true)
         {
             firstSpawn = false;
-            Debug.Log("firstSpawn is now set to false");
         }
         else if(_shotgun.foxIsHit == false)
         {
             firstSpawn = true;
-            Debug.Log("firstSpawn is now set to true");
-        }
+          }
     }
 
     private void SpawnFox()
@@ -59,12 +57,14 @@ public class FoxSpawn : MonoBehaviour
         Debug.Log("index: " + index); // developers' use
 
         Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity); // it will spawn fox from our specified random position.
+        _shotgun.foxIsHit = false;
         lastSpawnIndex = index; // we need to update the lastSpawnIndex to current index, after spawning of fox
     }
 
     private void SetTimeUntilSpawn()
     {
-        if (firstSpawn == true)
+        foxHitOrNot();
+        if (firstSpawn == false)
         {
             timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
         }
