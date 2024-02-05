@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BucketScript : ControllerMain
 {
+    private GameScore gameScore;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameScore = FindObjectOfType<GameScore>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,7 @@ public class BucketScript : ControllerMain
     {
         if (collision.gameObject.tag == "Egg")
         {
+            gameScore.IncrementScore();
             Destroy(collision.gameObject);
         }
     }
