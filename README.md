@@ -33,6 +33,7 @@ _NOTE: use primitive sprites for now (ie. shapes instead of final sprites)_
 8. Fox Shoot Cooldown (Saad & Krutarth)
 9. Connect Scripts (Saad) :white_check_mark:
 10. Day and Night Cycle (Mahian)
+11. Fox Attack cue (Nathan)
 
 ## Week 9-12
 1. Egg Frightened and Calm stage 
