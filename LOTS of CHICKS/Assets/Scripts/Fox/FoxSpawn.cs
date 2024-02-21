@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class FoxSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject foxPrefab;
+    [SerializeField] public GameObject foxPrefab;
     [SerializeField] private GameObject shotgunObject; // reference via Unity thru gameObject
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
     [SerializeField] private int DeathLag; //When fox dies
+    
 
     private float timeUntilSpawn;
     private bool firstSpawn;
@@ -25,7 +26,7 @@ public class FoxSpawn : MonoBehaviour
         SetTimeUntilSpawn();
     }
 
-    void Update()
+    public void Update()
     {
         timeUntilSpawn -= Time.deltaTime;
 
@@ -34,6 +35,8 @@ public class FoxSpawn : MonoBehaviour
             SpawnFox();
             SetTimeUntilSpawn();
         }
+
+
     }
 
     
@@ -49,7 +52,7 @@ public class FoxSpawn : MonoBehaviour
           }
     }
 
-    private void SpawnFox()
+    public void SpawnFox()
     {
         int index;
         do
@@ -78,4 +81,6 @@ public class FoxSpawn : MonoBehaviour
             timeUntilSpawn = Random.Range(minSpawnTime + DeathLag, maxSpawnTime + DeathLag);
         }
     }
+
 }
+

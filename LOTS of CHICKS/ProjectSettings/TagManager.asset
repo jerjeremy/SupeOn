@@ -8,6 +8,7 @@ TagManager:
   - Egg
   - Bucket
   - Chicken
+  - Spawn
   layers:
   - Default
   - TransparentFX
