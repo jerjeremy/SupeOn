@@ -31,4 +31,13 @@ public class FoxMovement_R2L : MonoBehaviour
         //    Destroy(gameObject); 
         //}
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Chicken")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }

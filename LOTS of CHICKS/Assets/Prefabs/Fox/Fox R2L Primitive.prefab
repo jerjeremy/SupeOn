@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5354765768648874453}
   - component: {fileID: -3832973089415344387}
   m_Layer: 0
-  m_Name: Fox right
+  m_Name: Fox R2L Primitive
   m_TagString: Fox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
