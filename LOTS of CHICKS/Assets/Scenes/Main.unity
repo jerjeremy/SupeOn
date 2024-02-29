@@ -1687,6 +1687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foxPrefab: {fileID: 9027691071031400880, guid: cafe9738fcd006f45ad10995545b878b, type: 3}
+  indicator: {fileID: 6729767286898901593, guid: 32720c331c19eac46b4cd1e8be61c0a4, type: 3}
   shotgunObject: {fileID: 1172515395}
   minSpawnTime: 3
   maxSpawnTime: 7
@@ -5505,6 +5506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foxPrefab: {fileID: 6170722394236523858, guid: c209d76a23aa1b04cb80fe15ced3d58b, type: 3}
+  indicator: {fileID: 1325952533714706258, guid: 7041827e869e0be40b2b90cd1e0a067f, type: 3}
   shotgunObject: {fileID: 1172515395}
   minSpawnTime: 3
   maxSpawnTime: 7

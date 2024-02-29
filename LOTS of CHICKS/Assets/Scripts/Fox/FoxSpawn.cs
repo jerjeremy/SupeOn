@@ -4,10 +4,12 @@ using UnityEngine;
 public class FoxSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject foxPrefab;
+    [SerializeField] private GameObject indicator;
     [SerializeField] private GameObject shotgunObject; // reference via Unity thru gameObject
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
     [SerializeField] private int DeathLag; //When fox dies
+    Vector2 randomSpawnPosition;
 
     private float timeUntilSpawn;
     private bool firstSpawn;
@@ -58,10 +60,13 @@ public class FoxSpawn : MonoBehaviour
 
         } while (index == lastSpawnIndex);
 
-        Vector2 randomSpawnPosition = spawnPositions[index].position; //multiple spawners, so can't use transform.positions
+        randomSpawnPosition = spawnPositions[index].position; //multiple spawners, so can't use transform.positions
         Debug.Log("index: " + index); // developers' use
-
-        Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity); // it will spawn fox from our specified random position.
+        Invoke("SpawnWarningObject", 0f);
+        Invoke("SpawnFoxObject", 1.0f);
+        // lag time
+        // instantiate fox
+         // it will spawn fox from our specified random position.
         _shotgun.foxIsHit = false;
         lastSpawnIndex = index; // we need to update the lastSpawnIndex to current index, after spawning of fox
     }
@@ -77,5 +82,17 @@ public class FoxSpawn : MonoBehaviour
         {
             timeUntilSpawn = Random.Range(minSpawnTime + DeathLag, maxSpawnTime + DeathLag);
         }
+    }
+
+    private void SpawnFoxObject()
+    {
+        Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity);
+    }
+
+    private void SpawnWarningObject()
+    {
+        GameObject indicatorClone = Instantiate(indicator, randomSpawnPosition, Quaternion.identity);
+        // destroy
+        Destroy(indicatorClone, 0.5f);
     }
 }
