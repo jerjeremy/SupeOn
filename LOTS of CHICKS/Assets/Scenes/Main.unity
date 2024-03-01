@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 190109819}
   m_Layer: 6
-  m_Name: Fox6 Spawner
+  m_Name: Fox Spawn LB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,13 +407,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190109818}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -1.14, z: 5.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.1919928, y: -1.1372973, z: 2.5145605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 831039509}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051152786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250132479
 GameObject:
@@ -681,7 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 405695400}
   m_Layer: 6
-  m_Name: Fox5 Spawner
+  m_Name: Fox Spawn LM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -696,12 +696,12 @@ Transform:
   m_GameObject: {fileID: 405695399}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.7, y: 0.79999995, z: 5.28}
+  m_LocalPosition: {x: -6.1919928, y: 0.80270267, z: 2.5145605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1989492934}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051152786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &503922351
 GameObject:
@@ -712,9 +712,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 503922352}
-  - component: {fileID: 503922353}
   m_Layer: 6
-  m_Name: Fox4 Spawner
+  m_Name: Fox Spawn LT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,36 +727,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503922351}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: 3, z: 5.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.1919928, y: 3.0027027, z: 2.5145605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 585433557}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051152786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &503922353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503922351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2371c47a52031c3479b196ad0835ca50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foxPrefab: {fileID: 9027691071031400880, guid: cafe9738fcd006f45ad10995545b878b, type: 3}
-  indicator: {fileID: 6729767286898901593, guid: 32720c331c19eac46b4cd1e8be61c0a4, type: 3}
-  shotgunObject: {fileID: 1172515395}
-  minSpawnTime: 3
-  maxSpawnTime: 7
-  DeathLag: 0
-  spawnPositions:
-  - {fileID: 405695400}
-  - {fileID: 503922352}
-  - {fileID: 190109819}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,7 +1386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 618586094}
   m_Layer: 6
-  m_Name: Fox2 Spawner
+  m_Name: Fox Spawn RM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1423,13 +1400,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618586093}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7, y: 0.8, z: 5.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.208007, y: 0.8027027, z: 2.5145605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1299738933}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051152786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
@@ -2569,6 +2546,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.05
+--- !u!1 &1051152785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051152786}
+  - component: {fileID: 1051152787}
+  m_Layer: 0
+  m_Name: Fox Spawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051152786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051152785}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.508007, y: -0.0027027205, z: 2.7654397}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1913811757}
+  - {fileID: 618586094}
+  - {fileID: 1265831217}
+  - {fileID: 503922352}
+  - {fileID: 405695400}
+  - {fileID: 190109819}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051152787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051152785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2371c47a52031c3479b196ad0835ca50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foxPrefabToRight: {fileID: 9027691071031400880, guid: cafe9738fcd006f45ad10995545b878b, type: 3}
+  foxPrefabToLeft: {fileID: 6170722394236523858, guid: c209d76a23aa1b04cb80fe15ced3d58b, type: 3}
+  indicatorOnRight: {fileID: 1325952533714706258, guid: 7041827e869e0be40b2b90cd1e0a067f, type: 3}
+  indicatorOnLeft: {fileID: 6729767286898901593, guid: 32720c331c19eac46b4cd1e8be61c0a4, type: 3}
+  shotgunObject: {fileID: 1172515395}
+  minSpawnTime: 3
+  maxSpawnTime: 7
+  DeathLag: 1
+  spawnPositions:
+  - {fileID: 1913811757}
+  - {fileID: 618586094}
+  - {fileID: 1265831217}
+  - {fileID: 503922352}
+  - {fileID: 405695400}
+  - {fileID: 190109819}
 --- !u!1 &1074300265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,7 +3480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1265831217}
   m_Layer: 6
-  m_Name: Fox3 Spawner
+  m_Name: Fox Spawn RB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3452,13 +3494,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265831216}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7, y: -1.14, z: 5.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.208007, y: -1.1372973, z: 2.5145605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 544366363}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051152786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1291144792
 GameObject:
@@ -4180,9 +4222,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913811757}
-  - component: {fileID: 1913811758}
   m_Layer: 6
-  m_Name: Fox1 Spawner
+  m_Name: Fox Spawn RT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4196,36 +4237,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913811756}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7, y: 3, z: 5.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.208007, y: 3.0027027, z: 2.5145605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 614445145}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051152786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1913811758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913811756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2371c47a52031c3479b196ad0835ca50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foxPrefab: {fileID: 6170722394236523858, guid: c209d76a23aa1b04cb80fe15ced3d58b, type: 3}
-  indicator: {fileID: 1325952533714706258, guid: 7041827e869e0be40b2b90cd1e0a067f, type: 3}
-  shotgunObject: {fileID: 1172515395}
-  minSpawnTime: 3
-  maxSpawnTime: 7
-  DeathLag: 0
-  spawnPositions:
-  - {fileID: 618586094}
-  - {fileID: 1913811757}
-  - {fileID: 1265831217}
 --- !u!1 &1951577933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,14 +4493,9 @@ SceneRoots:
   - {fileID: 260265581}
   - {fileID: 900682975}
   - {fileID: 708391068}
+  - {fileID: 1051152786}
   - {fileID: 1951577936}
   - {fileID: 1585730797}
-  - {fileID: 1913811757}
-  - {fileID: 618586094}
-  - {fileID: 1265831217}
-  - {fileID: 503922352}
-  - {fileID: 405695400}
-  - {fileID: 190109819}
   - {fileID: 1172515396}
   - {fileID: 164007236}
   - {fileID: 1763439625}

@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class FoxSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject foxPrefab;
-    [SerializeField] private GameObject indicator;
+    [SerializeField] private GameObject foxPrefabToRight;
+    [SerializeField] private GameObject foxPrefabToLeft;
+    [SerializeField] private GameObject indicatorOnRight;
+    [SerializeField] private GameObject indicatorOnLeft;
     [SerializeField] private GameObject shotgunObject; // reference via Unity thru gameObject
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
@@ -30,8 +32,7 @@ public class FoxSpawn : MonoBehaviour
     void Update()
     {
         timeUntilSpawn -= Time.deltaTime;
-
-        if (timeUntilSpawn <= 0 && GameObject.FindWithTag("Fox") == null)
+        if (timeUntilSpawn <= 0 && GameObject.FindGameObjectWithTag("Fox") == null)
         {
             SpawnFox();
             SetTimeUntilSpawn();
@@ -56,14 +57,23 @@ public class FoxSpawn : MonoBehaviour
         int index;
         do
         {
-            index = Random.Range(0, 3); // because I have 3 spawn locations at the moment.
+            index = Random.Range(0, spawnPositions.Length); // because I have 3 spawn locations at the moment.
 
         } while (index == lastSpawnIndex);
 
         randomSpawnPosition = spawnPositions[index].position; //multiple spawners, so can't use transform.positions
         Debug.Log("index: " + index); // developers' use
-        Invoke("SpawnWarningObject", 0f);
-        Invoke("SpawnFoxObject", 1.0f);
+        if (index >= 3) // LEFT
+        {
+            Invoke("SpawnWarningObjectOnLeft", 0f);
+            Invoke("SpawnFoxObjectToRight", 1.0f);
+        }
+        else if (index < 3) // RIGHT
+        {
+            Invoke("SpawnWarningObjectOnRight", 0f);
+            Invoke("SpawnFoxObjectToLeft", 1.0f);
+        }
+        
         // lag time
         // instantiate fox
          // it will spawn fox from our specified random position.
@@ -84,14 +94,24 @@ public class FoxSpawn : MonoBehaviour
         }
     }
 
-    private void SpawnFoxObject()
+    private void SpawnFoxObjectToRight()
     {
-        Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity);
+        Instantiate(foxPrefabToRight, randomSpawnPosition, Quaternion.identity);
+    }
+    private void SpawnFoxObjectToLeft()
+    {
+        Instantiate(foxPrefabToLeft, randomSpawnPosition, Quaternion.identity);
     }
 
-    private void SpawnWarningObject()
+    private void SpawnWarningObjectOnRight()
     {
-        GameObject indicatorClone = Instantiate(indicator, randomSpawnPosition, Quaternion.identity);
+        GameObject indicatorClone = Instantiate(indicatorOnRight, randomSpawnPosition, Quaternion.identity);
+        // destroy
+        Destroy(indicatorClone, 0.5f);
+    }
+    private void SpawnWarningObjectOnLeft()
+    {
+        GameObject indicatorClone = Instantiate(indicatorOnLeft, randomSpawnPosition, Quaternion.identity);
         // destroy
         Destroy(indicatorClone, 0.5f);
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7563897388689091431}
   m_Layer: 0
   m_Name: WarningLeft Variant
-  m_TagString: Untagged
+  m_TagString: Fox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
