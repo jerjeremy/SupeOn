@@ -10,6 +10,7 @@ public class FoxSpawn : MonoBehaviour
     [SerializeField] private GameObject shotgunObject; // reference via Unity thru gameObject
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
+    [SerializeField] private LayerMask chickenLayer;
     
     [SerializeField] private int DeathLag; //When fox dies
     Vector2 randomSpawnPosition;
@@ -69,7 +70,12 @@ public class FoxSpawn : MonoBehaviour
         } while (index == lastSpawnIndex);
 
         randomSpawnPosition = spawnPositions[index].position; //multiple spawners, so can't use transform.positions
+        // find target collider coords
+        Collider2D target = Physics2D.OverlapCircle(transform.position, 5.0f, chickenLayer);
+        Debug.Log("Target collider: " + target.transform.position);
+        Debug.Log("Spawn point coordinates: " + randomSpawnPosition);
         Debug.Log("index: " + index); // developers' use
+        randomSpawnPosition.y = target.transform.position.y;
         if (index >= 3) // LEFT
         {
             Invoke("SpawnWarningObjectOnLeft", 0f);

@@ -5,11 +5,8 @@ public class FoxMovement_R2L : MonoBehaviour
 {
     [SerializeField] float xSpeed; // horizontal speed from right to left
     [SerializeField] float speedIncrement;
+    public static Collider2D target;
 
-    void Start()
-    {
-        transform.Translate(Vector2.left * (xSpeed * Time.deltaTime)); // moves my fox to left with xSpeed, no matter how fast or slow the computer runs (due to Time.deltaTime)
-    }
     private void Update()
     {
         FoxMove();

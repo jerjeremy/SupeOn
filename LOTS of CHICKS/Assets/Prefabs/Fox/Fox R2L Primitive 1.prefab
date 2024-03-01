@@ -76,6 +76,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpeed: 1
   speedIncrement: 0.05
+  chickenLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!61 &1355257065196099334
 BoxCollider2D:
   m_ObjectHideFlags: 0
