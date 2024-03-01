@@ -4,7 +4,7 @@ using UnityEngine;
 public class FoxMovement_L2R : MonoBehaviour
 {
     [SerializeField] float xxSpeed; // horizontal speed from left to right, since xSpeed was already defined
-
+    [SerializeField] float speedIncrement;
     void Start()
     {
         transform.Translate(Vector2.right * (xxSpeed * Time.deltaTime)); // moves my fox to right with xSpeed, no matter how fast or slow the computer runs (due to Time.deltaTime)
@@ -12,6 +12,7 @@ public class FoxMovement_L2R : MonoBehaviour
     private void Update()
     {
         FoxMove();
+        xxSpeed += speedIncrement;
     }
     void FoxMove()
     {

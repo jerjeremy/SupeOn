@@ -4,6 +4,7 @@ using UnityEngine;
 public class FoxMovement_R2L : MonoBehaviour
 {
     [SerializeField] float xSpeed; // horizontal speed from right to left
+    [SerializeField] float speedIncrement;
 
     void Start()
     {
@@ -12,6 +13,7 @@ public class FoxMovement_R2L : MonoBehaviour
     private void Update()
     {
         FoxMove();
+        xSpeed += speedIncrement;
     }
     void FoxMove()
     {

@@ -10,6 +10,7 @@ public class FoxSpawn : MonoBehaviour
     [SerializeField] private GameObject shotgunObject; // reference via Unity thru gameObject
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
+    
     [SerializeField] private int DeathLag; //When fox dies
     Vector2 randomSpawnPosition;
 
@@ -36,6 +37,12 @@ public class FoxSpawn : MonoBehaviour
         {
             SpawnFox();
             SetTimeUntilSpawn();
+            if (minSpawnTime >= 1.0f)
+            {
+                minSpawnTime -= 0.5f;
+            }
+            if (maxSpawnTime >= 2.0f)
+            maxSpawnTime -= 0.5f;
         }
     }
 
