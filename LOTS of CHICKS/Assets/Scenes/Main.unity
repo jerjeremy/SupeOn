@@ -2603,6 +2603,9 @@ MonoBehaviour:
   shotgunObject: {fileID: 1172515395}
   minSpawnTime: 3
   maxSpawnTime: 7
+  chickenLayer:
+    serializedVersion: 2
+    m_Bits: 128
   DeathLag: 1
   spawnPositions:
   - {fileID: 1913811757}
