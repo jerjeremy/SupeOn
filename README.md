@@ -10,7 +10,7 @@
 * Google Drive for storing assets :white_check_mark:
     * [GOOGLE DRIVE](https://drive.google.com/drive/folders/1DNX-OYQnLbnPs0LLOuAPx4g9dM7cWrxx?usp=sharing)
 
-## Week 1-4
+## Week 1-4 (Deliverable: MVP)
 _NOTE: use primitive sprites for now (ie. shapes instead of final sprites)_
 
 1. Background sprite (OPEN) :white_check_mark:
@@ -24,15 +24,19 @@ _NOTE: use primitive sprites for now (ie. shapes instead of final sprites)_
 9. Shotgun (Jeremy) :white_check_mark:
    * crosshair
 
-## Week 5-8
+## Week 5-8 (Deliverable: ALPHA)
 1. Prefab chicken egg (Saad) :white_check_mark:
 2. Chicken :white_check_mark:
 3. Scoreboard (Sartaj) :white_check_mark:
 4. Music (Krutarth)
 7. Sprites (Saad)
-8. Fox Shoot Cooldown (Saad & Krutarth)
+8. Fox Shoot Cooldown (Jeremy)
 9. Connect Scripts (Saad) :white_check_mark:
-10. Day and Night Cycle (Mahian)
+10. Day and Night Cycle (Mahian) :construction_worker:
+11. Fox Attack cue (Nathan) :construction_worker:
 
-## Week 9-12
-1. Egg Frightened and Calm stage 
+## Week 9-12 (Deliverable: BETA/FINAL)
+1. Egg Frightened and Calm stage
+2. Negative effect for eggs (placeholder)
+3. Eggs Powerups
+4. Sprites and Music refinement
