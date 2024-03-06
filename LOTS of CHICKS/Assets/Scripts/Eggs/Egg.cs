@@ -5,6 +5,7 @@ using UnityEngine;
 public class Egg : MonoBehaviour
 {
     [SerializeField] float eggSpeed;
+
     void Start()
     {
         
@@ -18,5 +19,11 @@ public class Egg : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
+
+    
+
+
+
 }

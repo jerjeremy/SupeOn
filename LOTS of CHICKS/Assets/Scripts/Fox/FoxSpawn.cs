@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class FoxSpawn : MonoBehaviour
 {
-    [SerializeField] public GameObject foxPrefab;
+    [SerializeField] private GameObject foxPrefab;
     [SerializeField] private GameObject shotgunObject; // reference via Unity thru gameObject
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
     [SerializeField] private int DeathLag; //When fox dies
-    
+    [SerializeField] private GameObject Indicator; 
+     
 
     private float timeUntilSpawn;
     private bool firstSpawn;
@@ -26,7 +27,7 @@ public class FoxSpawn : MonoBehaviour
         SetTimeUntilSpawn();
     }
 
-    public void Update()
+    private void Update()
     {
         timeUntilSpawn -= Time.deltaTime;
 
@@ -52,7 +53,7 @@ public class FoxSpawn : MonoBehaviour
           }
     }
 
-    public void SpawnFox()
+    private void SpawnFox()  
     {
         int index;
         do
@@ -64,9 +65,11 @@ public class FoxSpawn : MonoBehaviour
         Vector2 randomSpawnPosition = spawnPositions[index].position; //multiple spawners, so can't use transform.positions
         Debug.Log("index: " + index); // developers' use
 
-        Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity); // it will spawn fox from our specified random position.
+        Instantiate(Indicator, randomSpawnPosition, Quaternion.identity); // it will spawn fox from our specified random position.
         _shotgun.foxIsHit = false;
         lastSpawnIndex = index; // we need to update the lastSpawnIndex to current index, after spawning of fox
+
+        Instantiate(foxPrefab, randomSpawnPosition, Quaternion.identity);
     }
 
     private void SetTimeUntilSpawn()

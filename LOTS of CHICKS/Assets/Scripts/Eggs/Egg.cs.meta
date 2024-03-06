@@ -3,7 +3,11 @@ guid: 85428ebf85a5e484f96bd0d485cb35c0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - egg: {fileID: 8361422325673714455, guid: 207450d225dbabc44b56eca0869876fa, type: 3}
+  - chaos: {fileID: 163306505963514634, guid: 4391e0596a676134b899e2ad7234d92b, type: 3}
+  - freeze: {fileID: 8290549136468366322, guid: 2da605248b295a74bbe9e79e7bb4958c, type: 3}
+  - rotten: {fileID: 738034163427966663, guid: fd111d9b7f00f394fab1af898d95bee1, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
