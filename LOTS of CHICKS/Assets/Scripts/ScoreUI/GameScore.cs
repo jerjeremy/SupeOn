@@ -37,4 +37,9 @@ public class GameScore : MonoBehaviour
     {
         Score++; // Increases the score by 1
     }
+
+    public void DecrementScore()
+    {
+        Score--;
+    }
 }

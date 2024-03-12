@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eggPrefab: {fileID: 8361422325673714455, guid: 207450d225dbabc44b56eca0869876fa, type: 3}
-  _minimumSpawnTime: 5
-  _maximumSpawnTime: 15
+  _minimumSpawnTime: 15
+  _maximumSpawnTime: 25
   decreaseMinBy: 1
   decreaseMaxBy: 1
 --- !u!50 &3757189364097131103
