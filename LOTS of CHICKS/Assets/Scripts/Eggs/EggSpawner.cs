@@ -4,67 +4,41 @@ using UnityEngine;
 
 public class EggSpawner : MonoBehaviour
 {
-    //issues: Eggs collide into each other and no idea what time we need for each special egg spawn
-
     [SerializeField] GameObject eggPrefab;
-    [SerializeField] GameObject chaosPrefab;
-    [SerializeField] GameObject freezePrefab;
-    [SerializeField] GameObject rottenPrefab; 
 
     [SerializeField] private float _minimumSpawnTime;
-    [SerializeField] private float _chaosMinSpawnTime;
-    [SerializeField] private float _freezeMinSpawnTime;
-    [SerializeField] private float _rottenMinSpawnTime;
 
     [SerializeField] private float _maximumSpawnTime;
-    [SerializeField] private float _chaosMaxSpawnTime;
-    [SerializeField] private float _freezeMaxSpawnTime;
-    [SerializeField] private float _rottenMaxSpawnTime; 
+    [SerializeField] private float decreaseMinBy;
+    [SerializeField] private float decreaseMaxBy;
+
 
     private float _timeUntilSpawn;
-    private float _timeChaosSpawn;
-    private float _timeFreezeSpawn;
-    private float _timeRottenSpawn; 
-
     // Start is called before the first frame update
     void Awake()
     {
         SetTimeUntilSpawn();
-        ChaosSpawn();
-        FreezeSpawn();
-        RottenSpawn(); 
-      
     }
 
     // Update is called once per frame
     void Update()
     {
         _timeUntilSpawn -= Time.deltaTime;
-        _timeChaosSpawn -= Time.deltaTime;
-        _timeFreezeSpawn -= Time.deltaTime;
-        _timeRottenSpawn -= Time.deltaTime; 
 
         if (_timeUntilSpawn <= 0)
         {
             Instantiate(eggPrefab, transform.position, Quaternion.identity);
+            if (_maximumSpawnTime >= 2f)
+            {
+                DecreaseMaxSpawnTime(decreaseMaxBy);
+            }
+            if (_minimumSpawnTime >= 2f)
+            {
+                DecreaseMinSpawnTime(decreaseMinBy);
+            }
+            
             SetTimeUntilSpawn();
         }
-        if (_timeChaosSpawn <= 0)
-        {
-            Instantiate(chaosPrefab, transform.position, Quaternion.identity);
-            ChaosSpawn(); 
-        }
-        if (_timeFreezeSpawn <= 0)
-        {
-            Instantiate(freezePrefab, transform.position, Quaternion.identity);
-            FreezeSpawn();
-        }
-        if (_timeRottenSpawn <= 0) 
-        {
-            Instantiate(rottenPrefab, transform.position, Quaternion.identity);
-            RottenSpawn(); 
-        }
-
     }
 
     private void SetTimeUntilSpawn()
@@ -72,18 +46,15 @@ public class EggSpawner : MonoBehaviour
         _timeUntilSpawn = UnityEngine.Random.Range(_minimumSpawnTime, _maximumSpawnTime);
     }
 
-    private void ChaosSpawn()
+    public void DecreaseMaxSpawnTime(float value)
     {
-        _timeChaosSpawn = UnityEngine.Random.Range(_chaosMinSpawnTime, _chaosMaxSpawnTime); 
+        _maximumSpawnTime -= value;
     }
 
-    private void FreezeSpawn()
+    public void DecreaseMinSpawnTime(float value)
     {
-        _timeFreezeSpawn = UnityEngine.Random.Range(_freezeMinSpawnTime, _freezeMaxSpawnTime);
+        _minimumSpawnTime -= value;
     }
 
-    private void RottenSpawn()
-    {
-        _timeRottenSpawn = UnityEngine.Random.Range(_rottenMinSpawnTime, _rottenMaxSpawnTime); 
-    }
+
 }
