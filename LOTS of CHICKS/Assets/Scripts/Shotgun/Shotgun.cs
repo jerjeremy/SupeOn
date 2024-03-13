@@ -53,8 +53,14 @@ public class Shotgun : MonoBehaviour
         {
             if (hit.collider.CompareTag("Fox"))
             {
+                MainManager.Instance.PlaySFX("6");
                 foxIsHit=true;
                 Debug.Log("Fox Hit");
+                Destroy(hit.collider.gameObject);
+            }
+            if (hit.collider.CompareTag("Chicken"))
+            {
+                MainManager.Instance.PlaySFX("0");
                 Destroy(hit.collider.gameObject);
             }
         }
