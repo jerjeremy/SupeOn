@@ -39,6 +39,7 @@ public class FoxMovement_L2R : MonoBehaviour
     {
         if (collision.gameObject.tag == "Chicken")
         {
+            MainManager.Instance.PlaySFX("0");
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

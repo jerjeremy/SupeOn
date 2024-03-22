@@ -22,8 +22,16 @@ public class BucketScript : ControllerMain
     {
         if (collision.gameObject.tag == "Egg")
         {
-            gameScore.IncrementScore();
+            MainManager.Instance.PlaySFX("5");
+            gameScore.IncrementScore();  
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Rotten")
+        {
+            MainManager.Instance.PlaySFX("5");
+            gameScore.DecrementScore2();  
+            Destroy(collision.gameObject);
+        }
+
     }
 }

@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 6736445271002996193}
   m_Layer: 7
   m_Name: Chicken
-  m_TagString: Chicken
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,17 +132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eggPrefab: {fileID: 8361422325673714455, guid: 207450d225dbabc44b56eca0869876fa, type: 3}
-  chaosPrefab: {fileID: 163306505963514634, guid: 4391e0596a676134b899e2ad7234d92b, type: 3}
-  freezePrefab: {fileID: 8290549136468366322, guid: 2da605248b295a74bbe9e79e7bb4958c, type: 3}
-  rottenPrefab: {fileID: 738034163427966663, guid: fd111d9b7f00f394fab1af898d95bee1, type: 3}
   _minimumSpawnTime: 2
-  _chaosMinSpawnTime: 15
-  _freezeMinSpawnTime: 15
-  _rottenMinSpawnTime: 6
   _maximumSpawnTime: 5
-  _chaosMaxSpawnTime: 30
-  _freezeMaxSpawnTime: 30
-  _rottenMaxSpawnTime: 15
 --- !u!50 &5070974867292016266
 Rigidbody2D:
   serializedVersion: 4
@@ -214,11 +205,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.017964125, y: 0.65868247}
-      - {x: -0.77141553, y: 0.23716071}
-      - {x: -0.5372448, y: -0.59832}
-      - {x: -0.18132442, y: -0.65948665}
-      - {x: 0.12883866, y: -0.66671085}
-      - {x: 0.4879136, y: -0.59120417}
-      - {x: 0.7714155, y: 0.27308887}
+    - - {x: 0, y: 1}
+      - {x: -0.95105654, y: 0.30901697}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.58778536, y: -0.80901694}
+      - {x: 0.9510565, y: 0.30901712}
   m_UseDelaunayMesh: 0
