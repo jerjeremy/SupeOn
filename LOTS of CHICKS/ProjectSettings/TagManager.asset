@@ -9,6 +9,8 @@ TagManager:
   - Bucket
   - Chicken
   - Rotten
+  - Freeze
+  - Chaos
   layers:
   - Default
   - TransparentFX

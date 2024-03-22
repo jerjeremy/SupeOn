@@ -32,5 +32,17 @@ public class Egg : MonoBehaviour
             MainManager.Instance.PlaySFX("1");
             Destroy(gameObject);
         }
+        if (gameObject.tag == "Freeze")
+            if (transform.position.y <= -6.37f)
+            {
+                MainManager.Instance.PlaySFX("1");
+                Destroy(gameObject);
+            }
+        if (gameObject.tag == "Chaos")
+            if (transform.position.y <= -6.37f)
+            {
+                MainManager.Instance.PlaySFX("1"); 
+                Destroy(gameObject);
+            }
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 275050169843740722}
   m_Layer: 10
   m_Name: chaos
-  m_TagString: Egg
+  m_TagString: Chaos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0
+  m_GravityScale: 0.05
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -162,3 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eggSpeed: 1
+  RandomRotationStrength: 0
+  FloatStrength: 0

@@ -32,6 +32,16 @@ public class BucketScript : ControllerMain
             gameScore.DecrementScore2();  
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Freeze")
+        {
+            MainManager.Instance.PlaySFX("5");
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Chaos") 
+        {
+            MainManager.Instance.PlaySFX("5");  
+            Destroy(collision.gameObject);
+        }
 
     }
 }
