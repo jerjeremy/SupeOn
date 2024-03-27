@@ -35,7 +35,17 @@ public class GameScore : MonoBehaviour
 
     public void IncrementScore()
     {
-        Score++; // Increases the score by 1
+        Score += 100; // Increases the score by 100 
+    }
+
+    public void DecrementScore()
+    {
+        Score -= 10; // Decrease the score when eggs touch the ground by 10
+    }
+
+    public void DecrementScore2()
+    {
+        Score -= 500; // Decrease the score when picking rotten eggs by 500
     }
 
     public void DecrementScore()

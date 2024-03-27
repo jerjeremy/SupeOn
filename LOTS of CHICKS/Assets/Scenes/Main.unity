@@ -337,7 +337,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3286,8 +3286,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -375.17395, y: -346.7771}
-  m_SizeDelta: {x: 273.6521, y: 58.2135}
+  m_AnchoredPosition: {x: -280.38, y: -280.7}
+  m_SizeDelta: {x: 221.2348, y: 96.994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1184688879
 MonoBehaviour:
@@ -4085,6 +4085,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16def187410212e438955e4cfc97c5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goSoundManager: {fileID: 0}
+  goSceneManager: {fileID: 0}
+  uiObjects: []
+  musicClips: []
+  soundClips: []
 --- !u!1 &1721824272
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,11 +19,30 @@ public class Egg : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up * FloatStrength);
 		 transform.Rotate(RandomRotationStrength,RandomRotationStrength,RandomRotationStrength);
         //transform.Translate(Vector3.down * (eggSpeed * Time.deltaTime));
+        if (gameObject.tag == "Egg") 
         if (transform.position.y <= -6.37f)
         {
             gameScore.DecrementScore();
             MainManager.Instance.PlaySFX("1");
             Destroy(gameObject);
         }
+        if(gameObject.tag == "Rotten")
+        if (transform.position.y <= -6.37f)
+        {
+            MainManager.Instance.PlaySFX("1");
+            Destroy(gameObject);
+        }
+        if (gameObject.tag == "Freeze")
+            if (transform.position.y <= -6.37f)
+            {
+                MainManager.Instance.PlaySFX("1");
+                Destroy(gameObject);
+            }
+        if (gameObject.tag == "Chaos")
+            if (transform.position.y <= -6.37f)
+            {
+                MainManager.Instance.PlaySFX("1"); 
+                Destroy(gameObject);
+            }
     }
 }
