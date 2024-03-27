@@ -48,8 +48,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eggPrefab: {fileID: 8361422325673714455, guid: 207450d225dbabc44b56eca0869876fa, type: 3}
-  _minimumSpawnTime: 5
-  _maximumSpawnTime: 15
+  rottenEgg: {fileID: 738034163427966663, guid: fd111d9b7f00f394fab1af898d95bee1, type: 3}
+  freezeEgg: {fileID: 8290549136468366322, guid: 2da605248b295a74bbe9e79e7bb4958c, type: 3}
+  chaosEgg: {fileID: 163306505963514634, guid: 4391e0596a676134b899e2ad7234d92b, type: 3}
+  _minimumSpawnTime: 3
+  _maximumSpawnTime: 25
+  rottenMinTime: 9
+  rottenMaxTime: 75
+  freezeMinTime: 30
+  freezeMaxTime: 250
+  chaosMinTime: 30
+  chaosMaxTime: 250
   decreaseMinBy: 1
   decreaseMaxBy: 1
 --- !u!50 &3757189364097131103

@@ -110,10 +110,12 @@ public class FoxSpawn : MonoBehaviour
     private void SpawnFoxObjectToRight()
     {
         Instantiate(foxPrefabToRight, randomSpawnPosition, Quaternion.identity);
+        MainManager.Instance.PlaySFX("2");
     }
     private void SpawnFoxObjectToLeft()
     {
         Instantiate(foxPrefabToLeft, randomSpawnPosition, Quaternion.identity);
+        MainManager.Instance.PlaySFX("2");
     }
 
     private void SpawnWarningObjectOnRight()
@@ -121,11 +123,13 @@ public class FoxSpawn : MonoBehaviour
         GameObject indicatorClone = Instantiate(indicatorOnRight, randomSpawnPosition, Quaternion.identity);
         // destroy
         Destroy(indicatorClone, 0.5f);
+        MainManager.Instance.PlaySFX("4");
     }
     private void SpawnWarningObjectOnLeft()
     {
         GameObject indicatorClone = Instantiate(indicatorOnLeft, randomSpawnPosition, Quaternion.identity);
         // destroy
         Destroy(indicatorClone, 0.5f);
+        MainManager.Instance.PlaySFX("4");
     }
 }

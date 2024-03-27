@@ -4,51 +4,108 @@ using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
-    private static MainManager instance;
-    public static MainManager Instance // constructor
-    {
-        get
-        {
-            if (instance == null)
-            {
-                Initialize();
-            }
-            return instance;
-        }
-    }
-    // Start is called before the first frame update
+    public static MainManager Instance { get; private set; }
+    [SerializeField] GameObject goSoundManager;
+    [SerializeField] GameObject goSceneManager;
+    SoundManager s_SoundManager;
+    SceneChangeManager s_SceneManager;
+    public List<GameObject> uiObjects;
+    [SerializeField] List<AudioClip> musicClips;
+    [SerializeField] List<AudioClip> soundClips;
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }   
+            Instance = this;
+            Initialize();
+            DontDestroyOnLoad(gameObject);
+        }
         else
         {
             Destroy(gameObject);
         }
     }
 
-    // create instance if none exists
-    private static void Initialize()
+    void Update()
     {
-        if (instance == null)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject gObj = new GameObject();
-            gObj.name = "Game Manager";
-            instance = gObj.AddComponent<MainManager>();
-            DontDestroyOnLoad(gObj);
+           Debug.Log("Space bar pressed");
+           ChangeSceneTo(1);
+           MainManager.Instance.PlayBGM("1");
         }
     }
 
-    // speed up egg drops
-    public void DecreaseDropDelay(float delayDecrement)
+    void Initialize()
     {
-        GameObject chickenHolder = GameObject.Find("Chicken Holder");
-        foreach (EggSpawner child in chickenHolder.transform.GetComponentsInChildren<EggSpawner>())
+        // set scripts
+        s_SoundManager = Instance.GetComponentInChildren<SoundManager>();
+        s_SceneManager = Instance.GetComponentInChildren<SceneChangeManager>();
+        
+        // add sounds
+        AddMusicClips();
+        AddSFXClips();
+        InitializeSoundFunctions();
+    }
+    // setup functions for main controller
+    private void AddMusicClips()
+    {
+        int i = 0;
+        foreach(AudioClip clip in musicClips)
         {
-            // TODO: decrease timer on each child
+            s_SoundManager.AddSound(i.ToString(), musicClips[i], SoundManager.SoundType.SOUND_MUSIC);
+            //Debug.Log("Successfully added sound " + i);
+            i++;
         }
+    }
+
+    private void AddSFXClips()
+    {
+        int i = 0;
+        foreach(AudioClip clip in soundClips)
+        {
+            s_SoundManager.AddSound(i.ToString(), soundClips[i], SoundManager.SoundType.SOUND_SFX);
+            //Debug.Log("Successfully added sound " + i);
+            i++;
+        }
+    }
+    
+    // sound manager functions
+    public void InitializeSoundFunctions()
+    {
+        s_SoundManager.Initialize();
+    }
+    public void PlaySFX(string soundKey)
+    {
+       s_SoundManager.PlaySound(soundKey);
+    }
+
+    public void PlayBGM(string soundKey)
+    {
+       s_SoundManager.PlayMusic(soundKey);
+    }
+
+    public void AdjustBGM(float value)
+    {
+        s_SoundManager.SetBGMVolume(value);
+    }
+    public void AdjustSFX(float value)
+    {
+        s_SoundManager.SetSFXVolume(value);
+    }
+    public void AdjustMain(float value)
+    {
+        s_SoundManager.SetMainVolumeScalar(value);
+    }
+    public void AdjustPan(float value)
+    {
+        s_SoundManager.SetStereoPan(value);
+    }
+
+    // scene manager funcs
+    public void ChangeSceneTo(int sceneIndexToLoad)
+    {
+        // Call the static method from the SceneManagerHelper class
+        SceneChangeManager.LoadSceneByIndex(sceneIndexToLoad);
     }
 }

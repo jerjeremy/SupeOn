@@ -8,6 +8,9 @@ TagManager:
   - Egg
   - Bucket
   - Chicken
+  - Rotten
+  - Freeze
+  - Chaos
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - Chicken
   - egg bucket
   - Fox
-  - 
+  - egg
   - 
   - 
   - 
