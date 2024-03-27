@@ -20,28 +20,28 @@ public class BucketScript : ControllerMain
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        MainManager.Instance.PlaySFX("5");
+
         if (collision.gameObject.tag == "Egg")
         {
-            MainManager.Instance.PlaySFX("5");
-            gameScore.IncrementScore();  
-            Destroy(collision.gameObject);
+            gameScore.IncrementScore(100);
         }
         if (collision.gameObject.tag == "Rotten")
         {
-            MainManager.Instance.PlaySFX("5");
-            gameScore.DecrementScore2();  
-            Destroy(collision.gameObject);
+            gameScore.DecrementScore(500);  
         }
         if (collision.gameObject.tag == "Freeze")
         {
-            MainManager.Instance.PlaySFX("5");
-            Destroy(collision.gameObject);
+            // do freeze things
         }
         if (collision.gameObject.tag == "Chaos") 
         {
-            MainManager.Instance.PlaySFX("5");  
-            Destroy(collision.gameObject);
+            // do chaos things
         }
-
+        if (collision.gameObject.tag == "Coin")
+        {
+            gameScore.IncrementScore(500);
+        }
+        Destroy(collision.gameObject);
     }
 }
