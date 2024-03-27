@@ -33,18 +33,13 @@ public class GameScore : MonoBehaviour
         scoreTextUI.text = scoreStr;
     }
 
-    public void IncrementScore()
+    public void IncrementScore(int score)
     {
-        Score += 100; // Increases the score by 100 
+        Score += score; // Increases the score by 100 
     }
 
-    public void DecrementScore()
+    public void DecrementScore(int score)
     {
-        Score -= 10; // Decrease the score when eggs touch the ground by 10
-    }
-
-    public void DecrementScore2()
-    {
-        Score -= 500; // Decrease the score when picking rotten eggs by 500
+        Score -= score; // Decrease the score when eggs touch the ground by 10
     }
 }

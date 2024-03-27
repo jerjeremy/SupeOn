@@ -7,7 +7,8 @@ public class EggSpawner : MonoBehaviour
     [SerializeField] GameObject eggPrefab;
     [SerializeField] GameObject rottenEgg;
     [SerializeField] GameObject freezeEgg;
-    [SerializeField] GameObject chaosEgg; 
+    [SerializeField] GameObject chaosEgg;
+    [SerializeField] GameObject coin; 
 
     [SerializeField] private float _minimumSpawnTime; 
     [SerializeField] private float _maximumSpawnTime;
@@ -38,7 +39,11 @@ public class EggSpawner : MonoBehaviour
         TimeUntilSpawn4();
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        Invoke("SetRandomizer", 0.5f);
+    }
+    
     void Update()
     {
         _timeUntilSpawn -= Time.deltaTime;
@@ -160,4 +165,14 @@ public class EggSpawner : MonoBehaviour
         chaosMinTime -= value; 
     }
 
+    public void SetRandomizer()
+    {
+        float randTime = Random.Range(15f, 30f);
+        Invoke("SpawnCoin", randTime);
+    }
+
+    public void SpawnCoin()
+    {
+        Instantiate(coin, transform.position, Quaternion.identity);
+    }
 }
